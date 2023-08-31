@@ -1,0 +1,110 @@
+*{
+    font-family: monospace;
+    margin: 0;
+}
+body{
+    background-image: url("https://i.pinimg.com/originals/dc/b5/60/dcb5603e99423ba079b771af1e6c80f4.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+.close-button{
+    display: none;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    height: 70px;
+    backdrop-filter: blur(7px);
+}
+.toggle-button{
+    background-color: transparent;
+    font-size: 30px;
+    border: none;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.toggle-button:hover{
+    font-weight: bolder;
+    font-size: 33px;
+    cursor: pointer;
+}
+.side-bar{
+    
+    /* width: 600px; */
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    backdrop-filter: blur(7px);
+    padding-right: 20px;
+    
+}
+
+.side-bar-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+h1{
+    padding-left: 40px;
+    font-size: 40px;
+    padding-top: 20px;
+}
+ul{
+    padding: 0;
+    margin-top: 60px;
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 20px 0px 20px 40px;
+    
+}
+ul li:hover{
+    background-color: rgba(0, 0, 0, 0.177);
+    border-left: 4px solid black;
+}
+
+.links{
+    transform: translate(-100%);
+    transition-duration: 1s;
+}
+.show-sidebar{
+    transform: translate(0);
+    transition-duration: 1s;
+}
+
+@media only screen and (min-width: 800px){
+    .close-button{
+        display: block;
+
+    }
+    .close-button:hover{
+        font-weight: bolder;
+        font-size: 33px;
+        cursor: pointer;
+    }
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        padding-right: 20px;
+        height: 70px;
+        backdrop-filter: blur(7px);
+    }
+    .close-button{
+        background-color: transparent;
+        font-size: 30px;
+        border: none;
+        padding-bottom: 10px;
+    }
+    .side-bar-header{
+        align-items: end;
+        gap: 75px
+    }
+}
